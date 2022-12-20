@@ -522,7 +522,7 @@ function MangAdmin:CreateMainSection()
     setpoint = {
       pos = "TOPLEFT",
       offX = 180,
-      offY = -10
+      offY = -200
     },
     text = Locale["ma_instakill"],
     inherits = "OptionsCheckButtonTemplate"

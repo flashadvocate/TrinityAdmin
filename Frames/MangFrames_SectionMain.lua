@@ -728,12 +728,12 @@ function MangAdmin:CreateMainSection()
     group = "main",
     parent = ma_midframe,
     size = {
-      width = 260,
+      width = 240,
       height = 20
     },
     setpoint = {
       pos = "TOPLEFT",
-      offX = 400,
+      offX = 420,
       offY = -163
     },
     inherits = "InputBoxTemplate"

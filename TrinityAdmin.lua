@@ -120,9 +120,9 @@ MangAdmin:RegisterDefaults("account",
       color = {
         buffer = {},
         buttons = {
-          r = 33,
-          g = 164,
-          b = 210
+          r = 0,
+          g = 0,
+          b = 0
         },
         frames = {
           r = 102,

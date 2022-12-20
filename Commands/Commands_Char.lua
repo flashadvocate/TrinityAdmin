@@ -633,18 +633,33 @@ function CharUnAuraButton()
 end
 
 function JailA()
-    cname=ma_charactertarget:GetText()
-    MangAdmin:ChatMsg(".tele name "..cname.." ma_AllianceJail")
-    MangAdmin:LogAction("Jailed player "..cname..".")
-    MangAdmin:ChatMsg(".notify "..cname.." has been found guilty and jailed.")
+  if (canJail())
+  then
+    cname = ma_charactertarget:GetText()
+    MangAdmin:ChatMsg(".freeze " .. cname)
+    MangAdmin:ChatMsg(".go xyz -98.0155 149.8360 -40.3827 35")
+    MangAdmin:ChatMsg(".summon " .. cname)
+    MangAdmin:LogAction("Jailed " .. cname .. ".")
+  end
 end
 
 function JailH()
-    cname=ma_charactertarget:GetText()
-    --self:ChatMsg("Selected "..cname)
-    MangAdmin:ChatMsg(".tele name "..cname.." ma_HordeJail")
-    MangAdmin:LogAction("Jailed player "..cname..".")
-    MangAdmin:ChatMsg(".notify "..cname.." has been found guilty and jailed.")
+  if (canJail())
+  then
+    cname = ma_charactertarget:GetText()
+    MangAdmin:ChatMsg(".freeze " .. cname)
+    MangAdmin:ChatMsg(".go xyz -11139.1845 -1742.4421 -29.7365 0")
+    MangAdmin:ChatMsg(".summon " .. cname)
+    MangAdmin:LogAction("Jailed " .. cname .. ".")
+  end
+end
+
+function canJail()
+  return (
+          UnitName("target") ~= UnitName("player")
+                  and UnitName("target") ~= nil
+                  and UnitName("npc") ~= nil
+  )
 end
 
 function UnJail()

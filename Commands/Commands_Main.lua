@@ -143,28 +143,6 @@ function DismountPlayer()
   end
 end
 
-function SetJail_A()
-    MangAdmin:ChatMsg(".tele del ma_AllianceJail")
-    local i = 1
-    while i<100 do
-        i=i+1
-        MangAdmin:ChatMsg(".")
-    end
-    MangAdmin:ChatMsg(".tele add ma_AllianceJail")
-    MangAdmin:LogAction("Set location of Alliance Jail")
-end
-
-function SetJail_H()
-    MangAdmin:ChatMsg(".tele del ma_HordeJail")
-    local i = 1
-    while i<100 do
-        i=i+1
-        MangAdmin:ChatMsg(".")
-    end
-    MangAdmin:ChatMsg(".tele add ma_HordeJail")
-    MangAdmin:LogAction("Set location of Horde Jail")
-end
-
 function GridNavigate(x, y)
   local way = MangAdmin.db.char.nextGridWay
   if not x and not y then

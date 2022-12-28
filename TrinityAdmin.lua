@@ -113,21 +113,21 @@ MangAdmin:RegisterDefaults("account",
       showchat = false,
       showminimenu = true,
       transparency = {
-        buttons = 1.0,
-        frames = 0.7,
-        backgrounds = 0.5
+        buttons = 1,
+        frames = 1,
+        backgrounds = 1
       },
       color = {
         buffer = {},
         buttons = {
-          r = 0,
-          g = 0,
-          b = 0
+          r = 0.1764705882352941,
+          g = 0.1764705882352941,
+          b = 0.1764705882352941
         },
         frames = {
-          r = 102,
-          g = 102,
-          b = 102
+          r = 0.1156862745098039,
+          g = 0.1156862745098039,
+          b = 0.1156862745098039
         },
         backgrounds = {
           r = 0,
@@ -1428,7 +1428,7 @@ function MangAdmin:SendMail(recipient, subject, body)  --[TODO]:Mail Update this
   subject = '"'..subject..'"'
   body = '"'..body..'"'
   self:ChatMsg(".send mail "..recipient.." "..subject.." "..body)
-  self:LogAction("Sent a mail to "..recipient..". Subject was: "..subject)
+  self:LogAction("Sent mail to "..recipient..". Subject was: "..subject)
 end
 
 function MangAdmin:UpdateMailBytesLeft()

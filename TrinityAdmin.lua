@@ -1268,7 +1268,7 @@ end
 function MangAdmin:AddItemSet(value)
   if self:Selection("player") or self:Selection("self") or self:Selection("none") then
     local player = UnitName("target") or UnitName("player")
-    self:ChatMsg(".additemset "..value)
+    self:ChatMsg(".additem set "..value)
     self:LogAction("Added itemset with id "..value.." to "..player..".")
   else
     self:Print(Locale["selectionerror1"])
@@ -1582,7 +1582,7 @@ function MangAdmin:SearchStart(var, value)
   elseif var == "itemset" then
     self.db.char.requests.itemset = true
     self.db.account.buffer.itemsets = {}
-    self:ChatMsg(".lookup itemset "..value)
+    self:ChatMsg(".lookup item set "..value)
   elseif var == "spell" then
     self.db.char.requests.spell = true
     self.db.account.buffer.spells = {}
